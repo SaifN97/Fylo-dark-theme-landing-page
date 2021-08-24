@@ -1,0 +1,61 @@
+:root {
+  --ff-sans: "Open Sans", sans-serif;
+  --ff-raleway: "Raleway", sans-serif;
+}
+
+/* reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+  line-height: 1;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dd,
+figure {
+  margin: 0;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+  padding: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  line-height: 1.3;
+  font-family: var(--ff-sans);
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+/*# sourceMappingURL=/main.48b3db1d.css.map */
