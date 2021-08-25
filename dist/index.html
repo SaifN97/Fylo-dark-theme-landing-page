@@ -30,11 +30,11 @@
 
     <main>
       <section class="hero">
-        <div class="container flow-content">
+        <div class="container">
           <div class="hero-img">
             <img src="/illustration-intro.31717cc9.png" alt="folder illustration">
           </div>
-          <div class="hero-text flow-content">
+          <div class="hero-text flow-content l-space">
             <h1>All your files in one secure location, accessible anywhere.</h1>
             <p>
               Fylo stores all your most important files in one secure location.
@@ -47,8 +47,8 @@
       </section>
 
       <section class="features">
-        <div class="container split">
-          <div>
+        <div class="container">
+          <div class="split">
             <div class="col flow-content xl-space">
               <img src="/icon-access-anywhere.5665bbc6.svg" alt="devices">
               <p class="h2">Access your files, anywhere</p>
@@ -57,7 +57,7 @@
                 your account means your files follow you everywhere.
               </p>
             </div>
-            <div class="col flow-content xl-space">
+            <div class="col flow-content xl-space security">
               <img src="/icon-security.859cb965.svg" alt="security">
               <p class="h2">Security you can trust</p>
               <p>
@@ -67,7 +67,7 @@
               </p>
             </div>
           </div>
-          <div>
+          <div class="split">
             <div class="col flow-content xl-space">
               <img src="/icon-collaboration.511eb533.svg" alt="collaboration">
               <p class="h2">Real-time collaboration</p>
@@ -173,6 +173,7 @@
             <label for="email"></label>
             <input type="email" name="email" class="email" placeholder="example@example.com">
             <button class="btn">Get Started For Free</button>
+            <div class="error">Please check your email</div>
           </form>
         </div>
       </section>
@@ -185,21 +186,26 @@
         </div>
         <div class="split l-space">
           <div class="contact-info flow-content">
-            <p class="address">
-              <img src="/icon-location.fa295aa5.svg" alt="location icon">
-              <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua</a>
-            </p>
-            <p class="phone">
-              <img src="/icon-phone.cc84a2ca.svg" alt="phone icon">
-              <a href="#">+1-543-123-4567</a>
-            </p>
-            <p class="mail">
-              <img src="/icon-email.e16cbdce.svg" alt="email icon">
-              <a href="#">example@fylo.com</a>
-            </p>
+            <div>
+              <p class="address">
+                <img src="/icon-location.fa295aa5.svg" alt="location icon">
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua</a>
+              </p>
+            </div>
+            <div class="flow-content">
+              <p class="phone">
+                <img src="/icon-phone.cc84a2ca.svg" alt="phone icon">
+                <a href="#">+1-543-123-4567</a>
+              </p>
+              <p class="mail">
+                <img src="/icon-email.e16cbdce.svg" alt="email icon">
+                <a href="#">example@fylo.com</a>
+              </p>
+            </div>
           </div>
-          <div>
+          <div class="split footer-split">
             <ul class="footer-nav flow-content l-space">
               <li><a href="#">About Us</a></li>
               <li><a href="#">Jobs</a></li>

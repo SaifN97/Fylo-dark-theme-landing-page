@@ -14,6 +14,16 @@
   --fw-700: 700;
 }
 
+@media (min-width: 50em) {
+  :root {
+    --fs-200: 1rem;
+    --fs-250: 1.25rem;
+    // --fs-300: 2rem;
+    --fs-400: 2rem;
+    --fs-500: 2.5rem;
+  }
+}
+
 /* reset */
 
 *,
@@ -30,7 +40,7 @@ h3,
 .h3,
 h4,
 .h4 {
-  line-height: 1.6;
+  line-height: 1.5;
   font-weight: var(--fw-700);
 }
 
@@ -62,7 +72,7 @@ figure {
 
 p,
 .para {
-  line-height: 1.4;
+  line-height: 1.5;
   font-weight: var(--fw-400);
 }
 
@@ -80,7 +90,7 @@ select {
 }
 
 input {
-  padding: 1em 2em;
+  padding: 0.75em 2em;
   width: 100%;
   border: 0;
   border: 1px solid transparent;
@@ -96,7 +106,7 @@ input {
   }
 
   &:invalid {
-    border: 1px solid red;
+    border: 1px solid $light-red;
   }
 }
 
@@ -144,7 +154,7 @@ a {
   cursor: pointer;
   border: 0;
   border-radius: 100vw;
-  padding: 1em 2.5em;
+  padding: 1em 2em;
   width: 100%;
   background: linear-gradient(to bottom right, $cyan, $blue);
   color: inherit;
@@ -169,13 +179,13 @@ section {
 
 @media (min-width: 50em) {
   section {
-    padding: 3.5rem 0;
+    padding: 3rem 0;
   }
 }
 
 .container {
   padding: 0 1.5rem;
-  max-width: 40rem;
+  max-width: 50rem;
   margin: 0 auto;
 }
 
@@ -196,7 +206,7 @@ section {
 @media (min-width: 50em) {
   .split {
     flex-direction: row;
-    gap: 2.5rem;
+    gap: 3.5rem;
   }
 }
 
@@ -205,5 +215,5 @@ section {
 }
 
 .l-space {
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 }

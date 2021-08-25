@@ -11,6 +11,14 @@
   --fw-700: 700;
 }
 
+@media (min-width: 50em) {
+  :root {
+    --fs-200: 1rem;
+    --fs-250: 1.25rem;
+    --fs-400: 2rem;
+    --fs-500: 2.5rem;
+  }
+}
 /* reset */
 *,
 *::before,
@@ -26,7 +34,7 @@ h3,
 .h3,
 h4,
 .h4 {
-  line-height: 1.6;
+  line-height: 1.5;
   font-weight: var(--fw-700);
 }
 
@@ -58,7 +66,7 @@ figure {
 
 p,
 .para {
-  line-height: 1.4;
+  line-height: 1.5;
   font-weight: var(--fw-400);
 }
 
@@ -76,7 +84,7 @@ select {
 }
 
 input {
-  padding: 1em 2em;
+  padding: 0.75em 2em;
   width: 100%;
   border: 0;
   border: 1px solid transparent;
@@ -90,7 +98,7 @@ input:focus {
   outline: none;
 }
 input:invalid {
-  border: 1px solid red;
+  border: 1px solid #ff4242;
 }
 
 img {
@@ -135,7 +143,7 @@ a:hover, a:focus {
   cursor: pointer;
   border: 0;
   border-radius: 100vw;
-  padding: 1em 2.5em;
+  padding: 1em 2em;
   width: 100%;
   background: linear-gradient(to bottom right, #65e2d9, #339ecc);
   color: inherit;
@@ -158,12 +166,12 @@ section {
 
 @media (min-width: 50em) {
   section {
-    padding: 3.5rem 0;
+    padding: 3rem 0;
   }
 }
 .container {
   padding: 0 1.5rem;
-  max-width: 40rem;
+  max-width: 50rem;
   margin: 0 auto;
 }
 
@@ -184,7 +192,7 @@ section {
 @media (min-width: 50em) {
   .split {
     flex-direction: row;
-    gap: 2.5rem;
+    gap: 3.5rem;
   }
 }
 .xl-space {
@@ -192,7 +200,7 @@ section {
 }
 
 .l-space {
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 }
 
 header,
@@ -220,7 +228,7 @@ nav {
 
 .logo {
   width: 25%;
-  max-width: 8rem;
+  max-width: 12rem;
 }
 
 .hero {
@@ -228,6 +236,9 @@ nav {
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
+}
+.hero img {
+  margin: 0 auto;
 }
 
 .hero,
@@ -241,6 +252,8 @@ nav {
 }
 .hero-text .btn {
   width: 80%;
+  margin-top: 2.1em;
+  max-width: 18rem;
 }
 
 .features .split {
@@ -258,7 +271,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 10rem;
+  max-width: 10.5rem;
   padding-bottom: 5px;
   color: #65e2d9;
   border-bottom: 2px solid #65e2d9;
@@ -280,6 +293,7 @@ nav {
   margin: 0 1em;
   border-radius: 5px;
   position: relative;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
 }
 .card p {
   font-size: 0.7rem;
@@ -318,30 +332,46 @@ nav {
 }
 
 .cta {
+  position: relative;
   background: #1c2431;
   margin: 0 auto;
   width: 90%;
-  max-width: 30rem;
+  max-width: 54rem;
   border-radius: 15px;
   box-shadow: 5px 0 10px rgba(0, 0, 0, 0.2);
-  transform: translateY(50%);
+  transform: translateY(45%);
+}
+.cta input:invalid + button:focus + .error {
+  visibility: visible;
+}
+.cta .error {
+  font-weight: var(--fw-700);
+  font-size: 0.8rem;
+  visibility: hidden;
+  color: #ff4242;
+  position: absolute;
+  bottom: 1rem;
+  left: 6rem;
 }
 
 footer {
   background: #0b1523;
-  padding-top: 15rem;
+  padding-top: 13rem;
 }
 footer .contact-info a {
   font-size: var(--fs-250);
 }
-footer .contact-info > * {
+footer .contact-info > div > * {
   display: flex;
   align-items: flex-start;
   gap: 1.5rem;
 }
-footer .contact-info > * > *:first-child {
-  width: 15px;
+footer .contact-info > div > * > *:first-child {
+  width: 20px;
   margin-top: 3px;
+}
+footer .footer-split {
+  gap: 0;
 }
 footer .social {
   display: flex;
@@ -362,6 +392,187 @@ footer .social a :focus {
 }
 footer .social > :first-child {
   padding: 5px 10px;
+}
+
+@media (min-width: 50em) {
+  .container {
+    max-width: 90%;
+  }
+
+  nav {
+    padding: 4.5em 5em;
+  }
+
+  .primary-nav {
+    gap: 3.5rem;
+  }
+
+  .hero {
+    --flow-spacer: 1.65em;
+    padding-top: 0rem;
+    padding-bottom: 10rem;
+    background-image: url("/bg-curvy-desktop.b3534639.svg");
+    background-repeat: no-repeat;
+    background-position: center 40.5rem;
+    background-size: contain;
+  }
+
+  .hero-text {
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-text p {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .features {
+    padding: 0;
+  }
+  .features .container {
+    display: flex;
+    flex-direction: column;
+    gap: 5.7rem;
+    width: 77%;
+  }
+  .features .split {
+    align-items: baseline;
+  }
+  .features .split .security {
+    padding-right: 5.563rem;
+    padding-left: 3.563rem;
+  }
+  .features .col {
+    margin-top: 0;
+    padding: 0 4.563rem;
+  }
+  .features .col .h2 {
+    margin-top: 1.5em;
+    font-size: 1.2rem;
+  }
+  .features .col p:not([class]) {
+    font-size: 0.875rem;
+    margin-top: 0.5em;
+  }
+
+  .info {
+    padding-bottom: 11.15rem;
+  }
+  .info .section-img {
+    flex-basis: 50%;
+  }
+  .info .section-text {
+    --flow-spacer: 1.25em;
+    flex-basis: 45%;
+    align-self: center;
+    margin-top: 3rem;
+  }
+  .info h2 {
+    font-size: var(--fs-500);
+    line-height: 1.2;
+    width: 80%;
+  }
+
+  .testimonials {
+    width: 86.5%;
+    gap: 0.5rem;
+  }
+  .testimonials .card {
+    padding: 2.5em 1.5em;
+    padding-bottom: 2em;
+  }
+  .testimonials .card p {
+    font-size: 0.96rem;
+    line-height: 1.4;
+  }
+  .testimonials .person {
+    --flow-spacer: 1.35em;
+    line-height: 0.5;
+    align-items: center;
+  }
+  .testimonials .person p {
+    font-size: 0.65rem;
+  }
+  .testimonials .person .photo {
+    width: 1.5rem;
+  }
+  .testimonials .person small {
+    font-size: 0.5rem;
+  }
+  .testimonials .quote::before {
+    transform: scale(1);
+    top: -35px;
+  }
+
+  .cta {
+    padding-top: 2.5rem;
+    margin-top: 4.8rem;
+  }
+  .cta .container {
+    width: 88%;
+  }
+  .cta p {
+    padding: 0 2em;
+    font-size: 0.875rem;
+  }
+  .cta form {
+    --flow-spacer: 1.3em;
+    display: flex;
+  }
+  .cta form label {
+    display: none;
+  }
+  .cta form input {
+    flex-basis: 68%;
+  }
+  .cta form button {
+    flex-basis: 28%;
+    font-size: 0.875rem;
+    margin-left: auto;
+  }
+
+  footer {
+    padding-bottom: 6rem;
+  }
+  footer .container {
+    width: 87%;
+  }
+  footer .contact-info {
+    gap: 4.5rem;
+    display: flex;
+  }
+  footer .contact-info > div:first-child {
+    flex-basis: 52%;
+  }
+  footer .contact-info > div:last-child {
+    margin-top: 0;
+  }
+  footer .contact-info > div:last-child a {
+    font-size: 0.875rem;
+  }
+  footer .contact-info a {
+    font-size: 1rem;
+  }
+  footer .split {
+    gap: 0;
+    align-items: flex-start;
+  }
+  footer .split.footer-split {
+    flex-basis: 60%;
+    transform: translateX(1.8rem);
+  }
+  footer .split ul {
+    margin: 0;
+  }
+  footer .split .social {
+    padding: 0;
+    transform: translateX(1.5rem);
+  }
+  footer .split .social a {
+    font-size: 0.875rem;
+  }
 }
 
 /*# sourceMappingURL=/main.48b3db1d.css.map */
